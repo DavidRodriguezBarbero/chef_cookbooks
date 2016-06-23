@@ -16,7 +16,7 @@ file '/etc/motd' do
   IPADDRESS: #{node['ipaddress']}
   HOSTNAME: #{node['hostname']}
   MEMORY: #{node['memory']['total']}
-  CPU: #{node['cpu']['0']['mhz']}
+  CPU: #{node['cpu']['0']['mhz']} MHz
 "
   action :create
 end
