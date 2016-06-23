@@ -1,6 +1,6 @@
 ---
 driver:
-  name: vagrant
+  name: docker
 
 provisioner:
   name: chef_zero
@@ -11,9 +11,15 @@ provisioner:
 #   name: inspec
 
 platforms:
-  - name: ubuntu-14.04
-  - name: centos-7.1
-
+#   - name: oracle_mio
+#     driver_config:
+#       image: oraclelinux:6.7
+#       platform: rhel
+   - name: centos-6.7
+     driver_config:
+       image: centos:6.7
+       platform: centos
+   
 suites:
   - name: default
     run_list:
