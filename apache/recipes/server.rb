@@ -3,7 +3,13 @@ package 'httpd' do
 end
 
 file '/var/www/html/index.html' do
-  content '<h1>Hello, world!</h1></br><h2>David\'s web server</h2>'
+  content "<h1>Hello, world!</h1>
+  <h2>This is David\'s web server:</h3>
+  <h3>IPADDRESS: #{node['ipaddress']}</h3>
+  <h3>HOSTNAME: #{node['hostname']}</h3>
+  <h3>MEMORY: #{node['memory']['total']}</h3>
+  <h3>CPU: #{node['cpu']['0']['mhz']} MHz</h3>
+"
   action :create
 end
 
