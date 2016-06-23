@@ -8,7 +8,7 @@ describe 'apache::default' do
   end
   describe file('/var/www/html/index.html') do
     it { should be_file }
-    its(:content) { should match /<h1>Hello, world!<\/h1><\/br><h2>David's web server<\/h2>/ }
+    its(:content) { should match /Hello, world!/ }
   end
   describe service('httpd') do
     it { should be_enabled }
