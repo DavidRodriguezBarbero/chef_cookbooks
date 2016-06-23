@@ -11,6 +11,12 @@ package 'git' do
 end
 
 file '/etc/motd' do
-  content 'Property of David R.'
+  content "Property of David R.
+
+  IPADDRESS: #{node['ipaddress']}
+  HOSTNAME: #{node['hostname']}
+  MEMORY: #{node['memory']['total']}
+  CPU: #{node['cpu']['0']['mhz']}
+"
   action :create
 end

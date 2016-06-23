@@ -19,9 +19,9 @@ platforms:
 #     driver_config:
 #       image: oraclelinux:7
 #       platform: rhel
-   - name: micentos-6.7
+   - name: centos-6.8
      driver_config:
-       image: centos:6.7
+       image: centos:6.8
        platform: centos
 
 suites:
