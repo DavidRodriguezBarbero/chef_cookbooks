@@ -7,8 +7,8 @@ file '/var/www/html/index.html' do
   <h2>This is David\'s web server:</h3>
   <h3>IPADDRESS: #{node['ipaddress']}</h3>
   <h3>HOSTNAME: #{node['hostname']}</h3>
-  <h3>MEMORY: #{node['memory']['total']}</h3>
-  <h3>CPU: #{node['cpu']['0']['mhz']} MHz</h3>
+  <h3>PUBLIC IP: #{node['cloud']['public_ipv4']}</h3>
+  <h3>PUBLIC HOSTNAME: #{node['cloud']['public_hostname']}</h3>
 "
   action :create
 end
